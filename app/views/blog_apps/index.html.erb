@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Blog apps</h1>
+
+<div id="blog_apps">
+  <% @blog_apps.each do |blog_app| %>
+    <%= render blog_app %>
+    <p>
+      <%= link_to "Show this blog app", blog_app %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New blog app", new_blog_app_path %>

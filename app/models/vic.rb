@@ -1,2 +1,0 @@
-class Vic < ApplicationRecord
-end
