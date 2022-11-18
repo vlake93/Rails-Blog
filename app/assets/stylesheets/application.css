@@ -14,15 +14,51 @@
  *= require_self
  */
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   background-color: #aaa;
 }
 
+p {
+  font-size: 2rem;
+}
+
+a:visited,
+a:link {
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+
+button {
+  margin-top: 1rem;
+}
+
 .title {
   color: blue;
+  font-size: 4rem;
 }
 
 #blog_apps {
   background-color: #555;
   padding: 0.5rem 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  /* display: flex;
+  align-items: center;
+  gap: 2rem; */
 }
