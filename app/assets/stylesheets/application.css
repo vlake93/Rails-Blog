@@ -32,6 +32,7 @@ body {
 
 p {
   font-size: 2rem;
+  margin: 1rem 0;
 }
 
 a:visited,
@@ -48,9 +49,23 @@ button {
   margin-top: 1rem;
 }
 
+form {
+  padding: 2rem;
+}
+
+label,
+input {
+  font-size: 2rem;
+}
+
+input {
+  height: 3rem;
+  width: 30rem;
+}
 .title {
   color: blue;
   font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
 #blog_apps {
@@ -61,4 +76,8 @@ button {
   /* display: flex;
   align-items: center;
   gap: 2rem; */
+}
+
+a:nth-child(3) {
+  margin-left: 1rem;
 }
