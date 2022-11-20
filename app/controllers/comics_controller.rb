@@ -4,20 +4,21 @@ class ComicsController < ApplicationController
     @comic = Comic.all
   end
 
+  def show
+  end
+
   def new
-    @comic = Comics.new
+    @comic = Comic.new
   end
 
   def create
-    @comic = Comics.new
-    @comic.name = params[:name]
-    @comic.body = params[:body]
+    @comic = Comic.new(comic_params)
 
     if @comic.save
       redirect_to comics_path
-      else
-        render:new
-      end
+    else
+      render :new
+    end
   end
 
   def edit
@@ -31,4 +32,11 @@ class ComicsController < ApplicationController
   def delete
 
   end
+
+  private
+
+  def comic_params
+    params.require(:comic).permit(:name, :body)
+  end
+  
 end

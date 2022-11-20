@@ -1,2 +1,40 @@
-<h1>Comics#new</h1>
-<p>Find me in app/views/comics/new.html.erb</p>
+<h1> NEW COMIC</h1>
+
+
+
+<%= form_with scope: :comic, url: create_comic_path, local: true do |f| %>
+  
+  <p>
+    <% if @comic.errors.any? %>
+      <ul>
+        <% @comic.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+
+    <% end %>
+
+  </p>
+
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %>
+  </p>
+  
+  
+  <p>
+    <%= f.label :body %><br/>
+    <%= f.text_field :body %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+
+<div>
+  <%= link_to "Back to Comics", comics_path %>
+</div>
+
