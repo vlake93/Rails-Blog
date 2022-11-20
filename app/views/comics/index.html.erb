@@ -1,11 +1,11 @@
-<h1>HEY HEY HEY</h1>
+<h1>Comics</h1>
 
 <table>
   <thead>
     <tr>
       <th>ID</th>
       <th>Name</th>
-      <th>Body</th>
+      <th class="table-head-body">Body</th>
     </tr>
 
   </thead>
@@ -13,9 +13,9 @@
   <tbody>
     <% @comic.each do |comic| %>
     <tr>
-      <td><%= comic.id %> </td>
+      <td class"table-body-id"><%= comic.id %> </td>
       <td><%= comic.name %> </td>
-      <td><%= comic.body %> </td>
+      <td class="table-body-body"><%= comic.body %> </td>
     </tr>
     <% end %>
   </tbody>

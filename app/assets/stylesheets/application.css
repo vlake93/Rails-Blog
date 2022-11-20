@@ -82,9 +82,19 @@ a:nth-child(3) {
   margin-left: 1rem;
 }
 
+table {
+  padding: 5rem;
+}
+
+th {
+  font-size: 2rem;
+}
+
 tr {
-  display: flex;
-  /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
   align-items: center;
   gap: 3rem;
 }
@@ -92,3 +102,8 @@ tr {
 td {
   font-size: 2rem;
 }
+
+tr th, tr td {
+  margin-bottom: 1rem;
+}
+
