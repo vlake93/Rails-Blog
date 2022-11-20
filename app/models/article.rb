@@ -1,3 +1,3 @@
 class Article < ApplicationRecord
-  validates :name, presence:true
+  validates :name, :body, presence:true
 end
