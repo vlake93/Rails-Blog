@@ -81,3 +81,14 @@ input {
 a:nth-child(3) {
   margin-left: 1rem;
 }
+
+tr {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 3rem;
+}
+
+td {
+  font-size: 2rem;
+}

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  # resources :articles
+  resources :blog_apps
+  resources :comics
   get 'comics/new'
   get 'comics/create'
-  resources :blog_apps
-  # resources :articles
   get 'home/index'
   # get '/comics' => 'comics#index'
   # get '/comics' => 'comics#new', as 'new_comic'
@@ -11,4 +12,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "blog_apps#index"
+  # root "comics#index"
 end
