@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'comics' => 'comics#index'
   get 'comics/new' => 'comics#new', as: 'comic_new'
   post 'comics/create' => 'comics#create', as: 'create_comic'
+  get 'comics/edit' => 'comics#edit', as: 'comic_edit'
+  patch 'comics/:id', to: 'comics#update'
   get 'home/index'
   # get '/comics' => 'comics#index'
   # get '/comics' => 'comics#new', as 'new_comic'

@@ -5,6 +5,8 @@ class ComicsController < ApplicationController
   end
 
   def show
+    @comic = Comic.find(1)
+    render :show
   end
 
   def new
@@ -22,11 +24,20 @@ class ComicsController < ApplicationController
   end
 
   def edit
-
+    @comic = Comic.find(params[:id])
+    render :edit
   end
 
   def update
+    @comic = Comic.find(params[:id])
 
+    if @comic.update(params.require(:comic).permit(:title, :description, :due_date))
+      flash[:success] = "Comic item successfully updated!"
+      redirect_to comics_path(@comic)
+    else
+      flash.now[:error] = "Comic item update failed"
+      render :edit
+    end
   end
 
   def delete

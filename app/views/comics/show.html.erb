@@ -1,2 +1,13 @@
 <h1>THIS IS SHOW ERB!</h1>
 
+<h1>Editing Comic</h1>
+
+<%= render "form", comic: @comic %>
+
+<br>
+
+<div>
+  <%= link_to "Show this comic", @comic %> |
+  <%= link_to "Back to comics", comics_path %>
+</div>
+

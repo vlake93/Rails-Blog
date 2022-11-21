@@ -13,9 +13,10 @@
   <tbody>
     <% @comic.each do |comic| %>
     <tr>
-      <td class"table-body-id"><%= comic.id %> </td>
+      <td class"table-body-id"><%= comic.id %>   </td>
       <td><%= comic.name %> </td>
       <td class="table-body-body"><%= comic.body %> </td>
+      <td><%= link_to "Edit", comic_edit_path(comic) %></td> 
     </tr>
     <% end %>
   </tbody>
