@@ -108,8 +108,26 @@ tr th, tr td {
 }
 
 
-.edit-div {
+.edit-div, input {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.submit-btn-container {
+  margin-top: 3rem;
+}
+
+.submit-btn-container input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.blog-img {
+  width: 100vw;
+  height: 10vh;
 }

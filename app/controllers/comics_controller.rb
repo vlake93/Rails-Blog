@@ -41,7 +41,7 @@ class ComicsController < ApplicationController
   end
 
   def delete
-
+    
   end
 
   private
