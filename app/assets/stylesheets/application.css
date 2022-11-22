@@ -125,6 +125,7 @@ tr th, tr td {
   color: white;
   background-color: black;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .blog-img {

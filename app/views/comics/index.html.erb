@@ -1,5 +1,5 @@
-<h1>Comics</h1>
 
+<h1>Comics</h1>
 <table>
   <thead>
     <tr>
@@ -16,11 +16,18 @@
       <td class"table-body-id"><%= comic.id %>   </td>
       <td><%= comic.name %> </td>
       <td class="table-body-body"><%= comic.body %> </td>
-      <td><%= link_to "Edit", comic_edit_path(comic) %></td> 
+      <td><%= link_to "Show", comic_show_path(comic) %></td> 
     </tr>
     <% end %>
   </tbody>
   </table>
 
 
+
+
 <%= link_to 'New Comic', comic_new_path %>
+
+
+<div class="loader-container">
+<img class="comic-loader" src="<%= image_path 'loader' %>"
+</div>
