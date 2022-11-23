@@ -1,7 +1,14 @@
-loader = document.querySelector(".loader-container")
+class Preloader {
+  constructor() {
+    this.element = document.querySelector(".loader-container");
+    this.hide()
+  }
 
-const timer = () => {
-  loader.display = "none"
+  hide() {
+    setTimeout(() => {
+     this.element.style.display = "none" 
+    }, 2000)
+  }
 }
 
-setTimeout(timer, 2000)
+export { Preloader}

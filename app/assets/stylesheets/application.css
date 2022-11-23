@@ -90,14 +90,14 @@ th {
   font-size: 2rem;
 }
 
-tr {
+/* tr {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   justify-items: center;
   align-items: center;
   gap: 3rem;
-}
+} */
 
 td {
   font-size: 2rem;
