@@ -9,32 +9,31 @@
 <% @comic.each do |comic| %>
   <tbody class="table-body">
     <tr class="table-row-content">
-     <td>
-        <div>
-          <img class="comic-img" src="<%= image_path 'comic' %>"
-        </div>
-        <div class="table-row-div">
-          <p>ID</p>
+     <td class="table-row-flex">
+
+        <div class="table-row-div table-row-id">
+          <p>ISSUE #</p>
           <p class"table-body-id"><%= comic.id %>   </p>
         </div>
-        <div class="table-row-div">
+        <div class="table-row-div table-row-name">
           <p>Name</p>
           <p><%= comic.name %> </p>
         </div>
-        <div class="table-row-div">
+        <div class="table-row-div table-row-body">
           <p>Body</p>
           <p class="table-body-body"><%= comic.body %> </p>
         </div>
       </td>
     </tr>
     <tr class="table-row-btn">
-      <td ><%= link_to "Show", comic_show_path(comic) %></td> 
+      <td class="eye"><%= link_to image_tag('eye.png', alt: "eye logo"), comic_show_path(comic) %></td> 
+      <td class="reset"><%= link_to image_tag('reset.png', alt: "eye logo"), comic_edit_path(comic)  %> </td> 
     </tr>
     <% end %>
   </tbody>
   </table>
 
-<div class="loader-container">
+  <div class="loader-container">
   <img class="comic-loader" src="<%= image_path 'loader' %>"
 </div>
 

@@ -1,12 +1,11 @@
-<h1>THIS IS SHOW VIEW!</h1>
+<h1>Show comic</h1>
 
-<h1>Editing Comic</h1>
+<%= render @comic %>
 
-
-<br>
-
-<div>
-  <%= link_to "Edit this comic", comic_edit_path %> |
+<div class="show-btn">
+  <%= link_to "Edit this comic", comic_edit_path  %> 
   <%= link_to "Back to comics", comics_path %>
-</div>
 
+  
+  <%= button_to "Destroy this blog app", @blog_app, method: :delete %>
+</div>

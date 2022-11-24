@@ -5,7 +5,7 @@ class ComicsController < ApplicationController
   end
 
   def show
-    @comic = Comic.find(1)
+    @comic = Comic.find(params[:id])
     render :show
   end
 
@@ -40,9 +40,13 @@ class ComicsController < ApplicationController
     end
   end
 
-  def delete
-    
-  end
+  def destroy
+    @comic = Comic.find(params[:id])
+    if @comic.present?
+      @comic.destroy
+    end
+    redirect_to comic_home_path(@comic)
+end
 
   private
 

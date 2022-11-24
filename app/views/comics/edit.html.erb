@@ -1,19 +1,12 @@
+<div class="edit-container">
 <h1>Editing Comic</h1>
 
-<%= form_with model: @comics, url: comics_path(@comics), method: :patch, local: true do |f| %>
+<%= render "form", comic: @comic %>
 
-  <div class="edit-div">
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.label :body %>
-    <%= f.text_field :body %>
-  <div>
-  <div  class="submit-btn-container">
-    <%= f.submit%>
-  </div>
-  </div>
+<br>
 
-<% end %>
+<div class="edit-btn">
+  <%= link_to "Show this comic", @comic %> |
+  <%= link_to "Back to comics", comics_path %>
+</div>
+<div>

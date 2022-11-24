@@ -23,10 +23,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+
+    & a {
+      background-color: black;
+      width: 12rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
 .comics-table {
+  // display: none;
   display: flex;
   gap: 5rem;
   padding: 10rem;
@@ -44,27 +55,76 @@
   border: 2px solid black;
   padding: 2rem;
   flex-grow: 0;
+  background: url('comic.png') center no-repeat;
+  background-size: cover;
 }
 
 .table-row {
 
   &-content{
+    margin-top: 4rem;
+    height: 45rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  &-flex {
+    justify-content: space-between;
   }
   
   &-div {
-    gap: 2rem;
+    gap: 1rem;
     justify-content: space-between;
     display: flex;
   }
 
-  &-btn {
+  &-id {
+    align-self: flex-start;
+  }
+
+  &-body {
     align-self: center;
   }
+
+  &-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    gap: 3rem;
+
+    & td a img {
+      height: 4rem;
+    }
+
+    & .reset a img {
+      height: 2.5rem;
+    }
+  }
+
 }
 
-.comic-img {
-  width: 15rem;
-  align-self: center;
+// .comic-img {
+//   width: 15rem;
+//   // align-self: center;
+//   margin-left: 5rem;
+// }
+
+.show-btn a, .edit-btn a {
+  background-color: black;
+  margin-left: 2rem;
+}
+
+.edit-container input[type=submit] {
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
+  border: none;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-left: 7rem;
+  cursor: pointer;
 }

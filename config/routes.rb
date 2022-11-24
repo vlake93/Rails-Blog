@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :blog_apps
   resources :comics
   # get 'blog_apps'
-  get 'comics' => 'comics#index'
+  get 'comics' => 'comics#index', as: 'comic_home'
   get 'comics/new' => 'comics#new', as: 'comic_new'
   post 'comics/create' => 'comics#create', as: 'create_comic'
   get 'comics/:id/edit', to: 'comics#edit', as: 'comic_edit'
