@@ -1,9 +1,19 @@
 
 <div  class="comics">
+<div class="backdrop"></div>
+<div class="overlay"></div>
 <div class="comics-header-container">
-  <h1 class="comics-header">Comics</h1>
+  <h1 class="comics-header">National Vic Store</h1>
   <%= link_to 'New Comic', comic_new_path %>
+  <div class="search-bar">
+    <h2>Search by title<h2>
+    <%= form_tag(comics_path, method: :get) do %>
+      <%= text_field_tag(:search, params[:search]) %>
+      <%= submit_tag ("Search") %>
+      <% end %>
+  </div>
 </div>
+
 
 <table class="comics-table">
 <% @comic.each do |comic| %>
@@ -16,11 +26,9 @@
           <p class"table-body-id"><%= comic.id %>   </p>
         </div>
         <div class="table-row-div table-row-name">
-          <p>Name</p>
           <p><%= comic.name %> </p>
         </div>
         <div class="table-row-div table-row-body">
-          <p>Body</p>
           <p class="table-body-body"><%= comic.body %> </p>
         </div>
       </td>
@@ -33,8 +41,10 @@
   </tbody>
   </table>
 
+
+
   <div class="loader-container">
-  <img class="comic-loader" src="<%= image_path 'loader' %>"
-</div>
+    <img class="comic-loader" src="<%= image_path 'loader' %>"
+  </div>
 
 </div>

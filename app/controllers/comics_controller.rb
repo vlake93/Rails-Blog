@@ -4,6 +4,10 @@ class ComicsController < ApplicationController
     @comic = Comic.all
   end
 
+  def search
+    @comic = Comic.search(params[:search])
+  end
+
   def show
     @comic = Comic.find(params[:id])
     render :show
@@ -31,7 +35,7 @@ class ComicsController < ApplicationController
   def update
     @comic = Comic.find(params[:id])
 
-    if @comic.update(params.require(:comic).permit(:title, :description, :due_date))
+    if @comic.update(params.require(:comic).permit(:name, :body))
       flash[:success] = "Comic item successfully updated!"
       redirect_to comics_path(@comic)
     else
@@ -51,7 +55,7 @@ end
   private
 
   def comic_params
-    params.require(:comic).permit(:name, :body)
+    params.require(:comic).permit(:name, :body, :search)
   end
   
 end
