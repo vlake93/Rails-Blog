@@ -2,8 +2,8 @@
   background-color: black;
   height: 109.5vh;
   width: 100vw;
-  display: none;
-  // display: flex;
+  // display: none;
+  display: flex;
   justify-content: center ;
   align-items: center;
   position: absolute;
@@ -16,7 +16,6 @@
 }
 
 .backdrop {
-
   height: 45vh;
   width: 99.1vw;
   position: absolute;
@@ -76,8 +75,8 @@
 }
 
 .comics-table {
-  // display: none;
-  display: flex;
+  display: none;
+  // display: flex;
   gap: 5rem;
   padding: 55rem 10rem 10rem 10rem;
   flex-wrap: wrap;

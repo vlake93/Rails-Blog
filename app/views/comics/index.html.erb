@@ -1,58 +1,51 @@
 
 <div  class="comics">
-<div class="backdrop"></div>
-<div class="overlay"></div>
-<div class="comics-header-container">
-  <h1 class="comics-header">National <span>Vic Store</span></h1>
 
-</div>
+  <div class="backdrop"></div>
+  <div class="overlay"></div>
+  <div class="comics-header-container">
+    <h1 class="comics-header">National <span>Vic Store</span></h1>
+  </div>
 
-
-<table class="comics-table">
-<% @comic.each do |comic| %>
-  <tbody class="table-body">
-    <tr class="table-row-content">
-     <td class="table-row-flex">
-
-        <div class="table-row-div table-row-id">
-          <p>ISSUE #</p>
-          <p class"table-body-id"><%= comic.id %>   </p>
-        </div>
-        <div class="table-row-div table-row-name">
-          <p><%= comic.name %> </p>
-        </div>
-        <div class="table-row-div table-row-body">
-          <p class="table-body-body"><%= comic.body %> </p>
-        </div>
-      </td>
-    </tr>
-    <tr class="table-row-btn">
-      <td class="eye"><%= link_to image_tag('eye.png', alt: "eye logo"), comic_show_path(comic) %></td> 
-      <td class="reset"><%= link_to image_tag('reset.png', alt: "eye logo"), comic_edit_path(comic)  %> </td> 
-    </tr>
+  <table class="comics-table">
+    <% @comic.each do |comic| %>
+    <tbody class="table-body">
+      <tr class="table-row-content">
+        <td class="table-row-flex">
+          <div class="table-row-div table-row-id">
+            <p>ISSUE #</p>
+            <p class"table-body-id"><%= comic.id %>   </p>
+          </div>
+          <div class="table-row-div table-row-name">
+            <p><%= comic.name %> </p>
+          </div>
+          <div class="table-row-div table-row-body">
+            <p class="table-body-body"><%= comic.body %> </p>
+          </div>
+        </td>
+      </tr>
+      <tr class="table-row-btn">
+        <td class="eye"><%= link_to image_tag('eye.png', alt: "eye logo"), comic_show_path(comic) %></td> 
+        <td class="reset"><%= link_to image_tag('reset.png', alt: "eye logo"), comic_edit_path(comic)  %> </td> 
+      </tr>
     <% end %>
-  </tbody>
+    </tbody>
   </table>
 
   <div class="search-bar">
-  <div class="search-bar-btn">
-    <h1>Comic</h1>
-    <%= link_to 'Home', comic_home_path %>
-    <%= link_to 'Create', comic_new_path %>
-  </div>
-   <%= form_tag(comics_path, method: :get) do %>
-     <%= text_field_tag(:search, params[:search]) %>
-     <%= submit_tag ("Search") %>
-     <% end %>
+    <div class="search-bar-btn">
+      <h1>Comic</h1>
+      <%= link_to 'Home', comic_home_path %>
+      <%= link_to 'Create', comic_new_path %>
+    </div>
+    <%= form_tag(comics_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag ("Search") %>
+    <% end %>
  </div>
-
-  <footer>
-  
-
-  <>
 
   <div class="loader-container">
     <img class="comic-loader" src="<%= image_path 'loader' %>"
   </div>
-
+  
 </div>

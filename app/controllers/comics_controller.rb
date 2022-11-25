@@ -17,7 +17,7 @@ class ComicsController < ApplicationController
     @comic = Comic.new(comic_params)
 
     if @comic.save
-      redirect_to comics_path
+      redirect_to comic_home_path
     else
       render :new
     end
