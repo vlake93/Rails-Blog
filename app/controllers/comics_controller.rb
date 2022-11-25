@@ -1,10 +1,6 @@
 class ComicsController < ApplicationController
 
   def index
-    @comic = Comic.all
-  end
-
-  def search
     @comic = Comic.search(params[:search])
   end
 

@@ -20,7 +20,7 @@
   height: 45vh;
   width: 99.1vw;
   position: absolute;
-  top: 0;
+  top: 5rem;
   background: url('backdrop.jpg') center no-repeat;
   background-size: cover;
 }
@@ -30,14 +30,28 @@
   height: 45vh;
   width: 99.1vw;
   position: absolute;
-  top: 0;
+  top: 5rem;
 }
 
 
 .comics-header {
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1rem;
   font-size: 8rem;
   color: white;
+  background-color: rgb(195, 0, 0);
+  font-family: 'Mr Dafoe', cursive;
+  width: 40rem;
+  border: 1px solid white;
+
+  & span {
+    font-family: 'Alexandria', sans-serif;
+    text-transform: uppercase;
+    font-size: 5rem;
+  }
 
   &-container {
     display: flex;
@@ -46,7 +60,7 @@
     align-items: center;
     position: absolute;
     top: 18rem;
-    left: 33.2vw;
+    left: 40vw;
 
 
     & a {
@@ -192,6 +206,63 @@
   margin-top: 2rem;
   margin-left: 7rem;
   cursor: pointer;
+}
+
+.search-bar {
+  width: 100vw;
+  height: 6rem;
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  border-bottom: 2px solid orangered;
+
+  &-btn {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 2rem;
+
+    & h1 {
+      font-size: 4.2rem;
+      color: white;
+      background-color: orangered;
+      padding: .5rem 1rem;
+    }
+
+     & a {
+      background-color: black;
+     }
+  }
+
+  & form {
+    display: flex;
+  }
+
+  & input[type=submit] {
+    border-radius: 0 1rem 1rem 0;
+    width: 8rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: orangered;
+    color: white;
+  }
+
+  & input[type=text] {
+    border-radius: 1rem 0 0 1rem;
+    padding: 1rem;
+    border: none;
+  }
+
+  & a {
+    border: 1px solid white;
+  }
 }
 
 @keyframes pulse {
